@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Weekly and monthly events calendar for Forest Meadow Baptist Church in Tijeras, New Mexico."
+        />
+        <title>Events Calendar | Forest Meadow Baptist Church</title>
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='1' y='22' width='62' height='20' rx='3.5' fill='%23252323'/%3E%3Ctext x='9.5' y='36' text-anchor='middle' font-family='Montserrat,Arial,sans-serif' font-weight='800' font-size='10.5' fill='%23F5F1ED'%3EFM%3C/text%3E%3Ctext x='54.5' y='36' text-anchor='middle' font-family='Montserrat,Arial,sans-serif' font-weight='800' font-size='10.5' fill='%23F5F1ED'%3EBC%3C/text%3E%3Cpath d='M32 13 L48.5 22.5 L48.5 41.5 L32 51 L15.5 41.5 L15.5 22.5 Z' fill='%23F5F1ED' stroke='%23252323' stroke-width='2.6' stroke-linejoin='round'/%3E%3Cpath d='M32 16.5 L45.5 24.2 L45.5 39.8 L33.4 46.8 L33.4 42.5 C36.5 42.2 39.2 41.2 41 39.8 L39.6 36.8 C37.8 36.5 36.1 35.9 34.8 35.1 L38.2 33.8 L35.4 28.4 L37.6 27.6 L34.6 22.4 L35.8 22 L32 16.5 Z' fill='%237F875E'/%3E%3Cpath d='M32 16.5 L28.2 22 L29.4 22.4 L26.4 27.6 L28.6 28.4 L25.8 33.8 L29.2 35.1 C27.9 35.9 26.2 36.5 24.4 36.8 L23 39.8 C24.8 41.2 27.5 42.2 30.6 42.5 L30.6 46.8 L32 47.6 Z' fill='%23252323'/%3E%3C/svg%3E"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Lora:ital,wght@0,500;1,400;1,500&family=Montserrat:wght@300;400;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body data-page="resources">
+        <div id="site-header-mount"></div>
+
+        <main id="main-content" tabindex="-1">
+            <section class="page-banner">
+                <div class="container page-banner__grid">
+                    <div>
+                        <span class="eyebrow">Church Life</span>
+                        <h1>Events Calendar &amp; Weekly Schedule</h1>
+                        <p>
+                            Explore our recurring weekly and monthly gatherings.
+                            For special holiday services, weather updates, and
+                            sign-ups, check our Online Bulletin or the Church
+                            Center App.
+                        </p>
+                    </div>
+                    <div class="banner-quick-panel">
+                        <span class="banner-quick-panel__label"
+                            >Live Updates &amp; Weather</span
+                        >
+                        <div class="banner-quick-links">
+                            <a
+                                class="btn btn--sage btn--sm"
+                                href="https://forestmeadowchurch.updates.church"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Weekly Bulletin</a
+                            >
+                            <a
+                                class="btn btn--outline-dark btn--sm"
+                                href="order-of-services.html"
+                                >Sunday Times</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div
+                        class="filter-bar"
+                        role="group"
+                        aria-label="Filter calendar events"
+                    >
+                        <button
+                            class="filter-btn is-active"
+                            type="button"
+                            data-event-filter="All"
+                        >
+                            All
+                        </button>
+                        <button
+                            class="filter-btn"
+                            type="button"
+                            data-event-filter="Sundays"
+                        >
+                            Sundays
+                        </button>
+                        <button
+                            class="filter-btn"
+                            type="button"
+                            data-event-filter="Bible Studies"
+                        >
+                            Bible Studies
+                        </button>
+                        <button
+                            class="filter-btn"
+                            type="button"
+                            data-event-filter="Kids &amp; Youth"
+                        >
+                            Kids &amp; Youth
+                        </button>
+                        <button
+                            class="filter-btn"
+                            type="button"
+                            data-event-filter="Fellowship"
+                        >
+                            Fellowship
+                        </button>
+                    </div>
+
+                    <div class="timeline" id="event-list">
+                        <div class="timeline-item" data-event-card="Sundays">
+                            <div class="timeline-item__label">
+                                <div>Every Sunday</div>
+                                <div
+                                    style="
+                                        font-size: 0.82rem;
+                                        font-weight: 600;
+                                        color: var(--sage-text);
+                                        margin-top: 0.2rem;
+                                    "
+                                >
+                                    9:30 AM
+                                </div>
+                            </div>
+                            <div class="timeline-item__body">
+                                <span class="pill" style="margin-bottom: 0.5rem"
+                                    >Sundays</span
+                                >
+                                <h3>Sunday Bible Classes &amp; Nursery Care</h3>
+                                <p
+                                    style="
+                                        font-size: 0.9rem;
+                                        font-weight: 600;
+                                        color: var(--charcoal);
+                                        margin-bottom: 0.35rem;
+                                    "
+                                >
+                                    Location: Main Building Classrooms &amp;
+                                    Nursery
+                                </p>
+                                <p style="color: var(--text-muted)">
+                                    Engaging Bible classes for Preschool through
+                                    Adults, with Nursery care for ages 0-3.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item" data-event-card="Fellowship">
+                            <div class="timeline-item__label">
+                                <div>Every Sunday</div>
+                                <div
+                                    style="
+                                        font-size: 0.82rem;
+                                        font-weight: 600;
+                                        color: var(--sage-text);
+                                        margin-top: 0.2rem;
+                                    "
+                                >
+                                    10:25 AM
+                                </div>
+                            </div>
+                            <div class="timeline-item__body">
+                                <span class="pill" style="margin-bottom: 0.5rem"
+                                    >Fellowship</span
+                                >
+                                <h3>Coffee &amp; Fellowship Time</h3>
+                                <p
+                                    style="
+                                        font-size: 0.9rem;
+                                        font-weight: 600;
+                                        color: var(--charcoal);
+                                        margin-bottom: 0.35rem;
+                                    "
+                                >
+                                    Location: Church Lawn / Foyer
+                                </p>
+                                <p style="color: var(--text-muted)">
+                                    Coffee, cookies, and warm conversation
+                                    between Bible classes and the Worship
+                                    Service.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item" data-event-card="Sundays">
+                            <div class="timeline-item__label">
+                                <div>Every Sunday</div>
+                                <div
+                                    style="
+                                        font-size: 0.82rem;
+                                        font-weight: 600;
+                                        color: var(--sage-text);
+                                        margin-top: 0.2rem;
+                                    "
+                                >
+                                    11:00 AM
+                                </div>
+                            </div>
+                            <div class="timeline-item__body">
+                                <span class="pill" style="margin-bottom: 0.5rem"
+                                    >Sundays</span
+                                >
+                                <h3>Sunday Worship Service</h3>
+                                <p
+                                    style="
+                                        font-size: 0.9rem;
+                                        font-weight: 600;
+                                        color: var(--charcoal);
+                                        margin-bottom: 0.35rem;
+                                    "
+                                >
+                                    Location: Sanctuary &amp; YouTube Livestream
+                                </p>
+                                <p style="color: var(--text-muted)">
+                                    Corporate worship, prayer, and biblical
+                                    preaching. Livestreamed to YouTube, Nursery,
+                                    and Youth Room.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item" data-event-card="Fellowship">
+                            <div class="timeline-item__label">
+                                <div>2nd - 5th Sundays</div>
+                                <div
+                                    style="
+                                        font-size: 0.82rem;
+                                        font-weight: 600;
+                                        color: var(--sage-text);
+                                        margin-top: 0.2rem;
+                                    "
+                                >
+                                    12:30 PM
+                                </div>
+                            </div>
+                            <div class="timeline-item__body">
+                                <span class="pill" style="margin-bottom: 0.5rem"
+                                    >Fellowship</span
+                                >
+                                <h3>All-Church Potluck Lunch</h3>
+                                <p
+                                    style="
+                                        font-size: 0.9rem;
+                                        font-weight: 600;
+                                        color: var(--charcoal);
+                                        margin-bottom: 0.35rem;
+                                    "
+                                >
+                                    Location: Fellowship Hall or Church Lawn
+                                </p>
+                                <p style="color: var(--text-muted)">
+                                    Open to visitors and members alike to share
+                                    a meal and deepen relationships.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item" data-event-card="Fellowship">
+                            <div class="timeline-item__label">
+                                <div>1st Sunday of Month</div>
+                                <div
+                                    style="
+                                        font-size: 0.82rem;
+                                        font-weight: 600;
+                                        color: var(--sage-text);
+                                        margin-top: 0.2rem;
+                                    "
+                                >
+                                    After Worship
+                                </div>
+                            </div>
+                            <div class="timeline-item__body">
+                                <span class="pill" style="margin-bottom: 0.5rem"
+                                    >Fellowship</span
+                                >
+                                <h3>1.1.12 Intentional Fellowship Day</h3>
+                                <p
+                                    style="
+                                        font-size: 0.9rem;
+                                        font-weight: 600;
+                                        color: var(--charcoal);
+                                        margin-bottom: 0.35rem;
+                                    "
+                                >
+                                    Location: Homes &amp; Community
+                                </p>
+                                <p style="color: var(--text-muted)">
+                                    1-on-1 relationship building once a month,
+                                    twelve times a year, in place of the church
+                                    potluck.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item" data-event-card="Fellowship">
+                            <div class="timeline-item__label">
+                                <div>Every Tuesday</div>
+                                <div
+                                    style="
+                                        font-size: 0.82rem;
+                                        font-weight: 600;
+                                        color: var(--sage-text);
+                                        margin-top: 0.2rem;
+                                    "
+                                >
+                                    9:00 AM
+                                </div>
+                            </div>
+                            <div class="timeline-item__body">
+                                <span class="pill" style="margin-bottom: 0.5rem"
+                                    >Fellowship</span
+                                >
+                                <h3>Ladies' Exercise Group</h3>
+                                <p
+                                    style="
+                                        font-size: 0.9rem;
+                                        font-weight: 600;
+                                        color: var(--charcoal);
+                                        margin-bottom: 0.35rem;
+                                    "
+                                >
+                                    Location: Fellowship Hall / Lovato Rd
+                                </p>
+                                <p style="color: var(--text-muted)">
+                                    Chair exercise or a group walk prior to
+                                    Tuesday Ladies Bible Study.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="timeline-item"
+                            data-event-card="Bible Studies"
+                        >
+                            <div class="timeline-item__label">
+                                <div>Every Tuesday</div>
+                                <div
+                                    style="
+                                        font-size: 0.82rem;
+                                        font-weight: 600;
+                                        color: var(--sage-text);
+                                        margin-top: 0.2rem;
+                                    "
+                                >
+                                    10:00 AM
+                                </div>
+                            </div>
+                            <div class="timeline-item__body">
+                                <span class="pill" style="margin-bottom: 0.5rem"
+                                    >Bible Studies</span
+                                >
+                                <h3>Tuesday Morning Ladies' Bible Study</h3>
+                                <p
+                                    style="
+                                        font-size: 0.9rem;
+                                        font-weight: 600;
+                                        color: var(--charcoal);
+                                        margin-bottom: 0.35rem;
+                                    "
+                                >
+                                    Location: Fellowship Hall
+                                </p>
+                                <p style="color: var(--text-muted)">
+                                    Scripture teaching and prayer led by Kathy
+                                    Miller (follows local school weather
+                                    cancellations).
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="timeline-item"
+                            data-event-card="Bible Studies"
+                        >
+                            <div class="timeline-item__label">
+                                <div>Every Tuesday</div>
+                                <div
+                                    style="
+                                        font-size: 0.82rem;
+                                        font-weight: 600;
+                                        color: var(--sage-text);
+                                        margin-top: 0.2rem;
+                                    "
+                                >
+                                    6:30 PM
+                                </div>
+                            </div>
+                            <div class="timeline-item__body">
+                                <span class="pill" style="margin-bottom: 0.5rem"
+                                    >Bible Studies</span
+                                >
+                                <h3>Men's Bible Study</h3>
+                                <p
+                                    style="
+                                        font-size: 0.9rem;
+                                        font-weight: 600;
+                                        color: var(--charcoal);
+                                        margin-bottom: 0.35rem;
+                                    "
+                                >
+                                    Location: Fellowship Hall
+                                </p>
+                                <p style="color: var(--text-muted)">
+                                    Fellowship, prayer, and Bible study with
+                                    Pastor Tom Lambert.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="timeline-item"
+                            data-event-card="Kids & Youth"
+                        >
+                            <div class="timeline-item__label">
+                                <div>Every Wednesday</div>
+                                <div
+                                    style="
+                                        font-size: 0.82rem;
+                                        font-weight: 600;
+                                        color: var(--sage-text);
+                                        margin-top: 0.2rem;
+                                    "
+                                >
+                                    6:00 PM - 7:45 PM
+                                </div>
+                            </div>
+                            <div class="timeline-item__body">
+                                <span class="pill" style="margin-bottom: 0.5rem"
+                                    >Kids &amp; Youth</span
+                                >
+                                <h3>Pathfinders Kids Bible Program</h3>
+                                <p
+                                    style="
+                                        font-size: 0.9rem;
+                                        font-weight: 600;
+                                        color: var(--charcoal);
+                                        margin-bottom: 0.35rem;
+                                    "
+                                >
+                                    Location: FMBC Campus
+                                </p>
+                                <p style="color: var(--text-muted)">
+                                    Ages 3-12: Wanderers, Seekers, Explorers,
+                                    and Trailblazers — Finding the Path to
+                                    Knowing God.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="timeline-item"
+                            data-event-card="Kids & Youth"
+                        >
+                            <div class="timeline-item__label">
+                                <div>Every Wednesday</div>
+                                <div
+                                    style="
+                                        font-size: 0.82rem;
+                                        font-weight: 600;
+                                        color: var(--sage-text);
+                                        margin-top: 0.2rem;
+                                    "
+                                >
+                                    6:00 PM
+                                </div>
+                            </div>
+                            <div class="timeline-item__body">
+                                <span class="pill" style="margin-bottom: 0.5rem"
+                                    >Kids &amp; Youth</span
+                                >
+                                <h3>Themelios Youth Ministry</h3>
+                                <p
+                                    style="
+                                        font-size: 0.9rem;
+                                        font-weight: 600;
+                                        color: var(--charcoal);
+                                        margin-bottom: 0.35rem;
+                                    "
+                                >
+                                    Location: Youth Room
+                                </p>
+                                <p style="color: var(--text-muted)">
+                                    Teens ages 13-18 gather for Bible study,
+                                    games, snacks, and community outreach.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item" data-event-card="Fellowship">
+                            <div class="timeline-item__label">
+                                <div>1st Friday of Month</div>
+                                <div
+                                    style="
+                                        font-size: 0.82rem;
+                                        font-weight: 600;
+                                        color: var(--sage-text);
+                                        margin-top: 0.2rem;
+                                    "
+                                >
+                                    Check Bulletin
+                                </div>
+                            </div>
+                            <div class="timeline-item__body">
+                                <span class="pill" style="margin-bottom: 0.5rem"
+                                    >Fellowship</span
+                                >
+                                <h3>First Friday 55+ Potluck</h3>
+                                <p
+                                    style="
+                                        font-size: 0.9rem;
+                                        font-weight: 600;
+                                        color: var(--charcoal);
+                                        margin-bottom: 0.35rem;
+                                    "
+                                >
+                                    Location: Fellowship Hall
+                                </p>
+                                <p style="color: var(--text-muted)">
+                                    Monthly meal and warm fellowship for seniors
+                                    and adults 55+.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section--sage">
+                <div class="container">
+                    <div class="card card--gold-top">
+                        <div>
+                            <h3>
+                                Mountain Weather &amp; Special Announcements
+                            </h3>
+                            <p style="margin-bottom: 0">
+                                Because we are located in the East Mountains,
+                                weekday studies (such as Tuesday Ladies' Bible
+                                Study) follow local school weather delays and
+                                cancellations. Always check the
+                                <a
+                                    href="https://forestmeadowchurch.updates.church"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >Weekly Online Bulletin</a
+                                >
+                                or the Church Center App for real-time updates.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <div id="site-footer-mount"></div>
+        <script src="site.js"></script>
+    </body>
+</html>
